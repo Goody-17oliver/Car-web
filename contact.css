@@ -64,3 +64,18 @@ h1{
     background-color: rgba(247, 15, 15, 0.644);
     color: white;
 }
+span{
+    color: #058383;
+    font-size: 16px;
+
+}
+.sign{
+     color: white;
+     text-decoration: none;
+     font-size: 17px;
+     font-weight: bold;
+     font-family: Arial, Helvetica, sans-serif;
+}
+.sign:hover{
+    color: #dd0707;
+}
