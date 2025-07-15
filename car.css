@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+body{
+    background: black;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo{
+    width: 150px;
+    border-radius: 10%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 80px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+a{
+    color: #fff;
+    margin-left: 30px;
+    position: relative;
+    font-weight: 600;
+}
+a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dd0707;
+    transition: 0.4s;
+}
+a:hover::after{
+    width: 100%;
+}
+i{
+    color: #dd0707;
+    font-size: 30px;
+    margin-left: 10px;
+    transition: 0.3;
+
+}
+i:hover{
+    transform: scale(1.3);
+    color: #fff;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url(Gemini_Generated_Image_gz2fbagz2fbagz2f-removebg-preview.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 90%;
+    margin: auto;
+}
+h4{
+    font-size: 40px;
+    color: #058383;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+h1{
+    color: #fff;
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+span{
+    color: #dd0707;
+    font-size: 80px;
+    font-weight: bold;
+    font-weight: 600;
+}
+p{
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.btn{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid #058383;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: 600;
+     text-decoration: none;
+}
+.btn:hover{
+    background-color: transparent;
+    border: none;
+    color: red;
+    border:3px solid white;
+}
+
+
+/* Tablet Landscape and Smaller Laptops (e.g., 1024px to 769px) */
+@media (max-width: 1024px) {
+    .logo {
+        width: 130px;
+    }
+    nav {
+        width: 95%;
+    }
+    .text {
+        max-width: 600px;
+        padding: 15px;
+    }
+    h4 {
+        font-size: 35px;
+    }
+    h1 {
+        font-size: 55px;
+    }
+    span {
+        font-size: 70px;
+    }
+    p {
+        font-size: 1.05em;
+    }
+}
+
+/* Tablet Portrait and Larger Phones (e.g., 768px to 481px) */
+@media (max-width: 768px) {
+    .logo {
+        width: 110px;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    .menu, .social {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .menu a {
+        margin: 5px 12px;
+        font-size: 0.95em;
+    }
+    .social i {
+        font-size: 25px;
+        margin: 5px 8px;
+    }
+
+    .text {
+        padding: 10px;
+    }
+    h4 {
+        font-size: 28px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    span {
+        font-size: 55px;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 8px 25px;
+        font-size: 0.95em;
+    }
+}
+
+/* Standard Phones (e.g., 480px and below) */
+@media (max-width: 480px) {
+    .logo {
+        width: 90px;
+    }
+    .menu a {
+        margin: 4px 8px;
+        font-size: 0.85em;
+    }
+    .social i {
+        font-size: 20px;
+        margin: 4px 6px;
+    }
+
+    /* Key adjustments for phone image and text positioning */
+    .hero {
+        /* Reduce height for a better composition on phone */
+        height: 80vh; /* This makes the hero section less tall */
+        /* You might want to adjust how the background image is positioned */
+        background-position: center bottom; /* Tries to keep the bottom of the image visible */
+        /* Or if the car is primarily central, keep 'center center' */
+        /* background-position: center center; */
+    }
+
+    .text {
+        padding: 5px 10px; /* Minimal padding, adjust as needed */
+        /* To ensure text is visible over the car on phone, you might want to push it up or down */
+        /* If the car is very prominent in the middle, consider aligning text */
+        /* For example, to push text towards the top: */
+        justify-content: flex-start; /* Aligns text to the top of hero */
+        align-items: center; /* Keeps text centered horizontally */
+        padding-top: 15vh; /* Adds more space from top, push content down */
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    span {
+        font-size: 45px;
+    }
+    p {
+        font-size: 0.85em;
+    }
+    .btn {
+        padding: 7px 20px;
+        font-size: 0.85em;
+    }
+}
